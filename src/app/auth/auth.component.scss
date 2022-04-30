@@ -1,0 +1,42 @@
+.auth-page {
+  background-image: url(https://tophinhnen.com/wp-content/uploads/2018/01/tai-hinh-nen-thien-nhien-4k-dep-114.jpg);
+  background-size: cover;
+  .body {
+    height: calc(100vh);
+    width: calc(100vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form div input {
+    border-radius: 20px;
+    width: 320px;
+    height: 30px;
+    padding-left: 10px;
+  }
+
+  .form {
+    display: grid;
+    height: 200px;
+    justify-content: space-between;
+  }
+
+  .pobup {
+    width: 400px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    border-radius: 20px;
+  }
+
+  .test-center {
+    justify-content: center;
+    align-items: center;
+    display: contents;
+  }
+}
+
+

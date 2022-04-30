@@ -1,0 +1,33 @@
+.app-slidenav {
+  height: 100%;
+  .logo-app {
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fanhdep.tv%2Fstocks%2Flogo-bieu-tuong-su-tu-den-bang-hinh-hoc-sang-tao-tren-nen-mau-trang.6621%2F&psig=AOvVaw1IKIUi2FWtv2xyYEJCc49o&ust=1650995188254000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPj5kcHir_cCFQAAAAAdAAAAABAD);
+    background-size: cover;
+  }
+
+  .header-app-page {
+    height: 60px;
+    background-color: #b5b2a9;
+    padding: 0px 8px;
+  }
+  .sidenav-menu {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+  }
+  .example-sidenav-content {
+    height: calc(100%);
+    .app-content {
+      background-color: #FAFAFA;;
+    }
+  }
+
+}
+
+::ng-deep {
+  .mat-drawer-container {
+    background-color: unset;
+    color: unset;
+  }
+}

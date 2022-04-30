@@ -1,0 +1,60 @@
+<div class="page-add-product">
+  <div class="chip-select-form-mobile-color">
+    <div> thông tin màu sắc sản phẩm </div>
+    <app-chip-common [arrayChip]="itemColorChipProduct" (outPutArrayChip)="itemColorProduct($event)"></app-chip-common>
+  </div>
+  <div class="chip-select-form-mobile-color">
+    <div class="">{{'thông tin dung lượng sản phẩm'}}</div>
+    <app-chip-common [arrayChip]="itemCapacityChipProduct" (outPutArrayChip)="itemCapacityProduct($event)"></app-chip-common>
+  </div>
+  <button class="btn btn-primary" (click)="viewFormAdd()">new form add</button>
+  <div class="panel mt-3 table-input-product padding-lr-12-px">
+    <div class="row h4 mb-0 line-button">
+      <div class="col-2 d-flex align-items-center justify-content-center line-right">
+          name color
+      </div>
+      <div class="col-2 d-flex align-items-center justify-content-center line-right">
+        code color
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center line-right">
+        select color
+      </div>
+      <div class="col-5">
+        <div class="row h-40-px">
+          <div class="col-4 d-flex align-items-center justify-content-center line-right">
+            capacity
+          </div>
+          <div class="col-8 d-flex align-items-center justify-content-center">
+            quantity
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngFor="let product of formAddProduct">
+      <div class="row line-button">
+        <div class="col-2 d-flex align-items-center line-right">
+          {{ product.color }}
+        </div>
+        <div class="col-2 d-flex align-items-center line-right">
+          {{ product.colorCode }}
+          <input class="input-color" [cpOutputFormat]="'hex'" [style.background]="product.colorCode" [(colorPicker)]="product.colorCode"/>
+        </div>
+        <div class="col-3 d-flex align-items-center line-right">
+          {{ product.image }}
+        </div>
+        <div class="col-5">
+          <ng-container *ngFor="let item of product.inForCapacity, let i = index">
+            <div class="row h-40-px" [ngClass]="{'line-button' : i+1 < product.inForCapacity.length }">
+              <div class="col-4 d-flex align-items-center line-right">
+                {{item.capacity}}
+              </div>
+              <div class="col-8 d-flex align-items-center">
+                {{item.quantity}}
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

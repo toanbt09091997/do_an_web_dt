@@ -1,0 +1,39 @@
+<mat-sidenav-container class="app-slidenav" fullscreen>
+  <mat-sidenav #sidenav  mode="side" class="example-sidenav" opened="true">
+    <div class="sidenav-menu">
+      <mat-icon>menu</mat-icon>
+    </div>
+<!--    <div class="logomain">Logo Part</div>-->
+    <mat-nav-list>
+      <mat-list-item routerLink="1" routerLinkActive="active" >
+        <mat-icon mat-list-icon>person</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">About</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="2" routerLinkActive="active">
+        <mat-icon mat-list-icon>settings</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Services</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="3" routerLinkActive="active">
+        <mat-icon mat-list-icon>local_phone</mat-icon>
+        <div fxFlex="10"></div>
+        <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+          <h5 class="lead">Contact</h5>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="example-sidenav-content">
+    <div class="header-app-page d-flex align-items-center">
+      header
+    </div>
+    <router-outlet class="app-content"></router-outlet>
+  </div>
+</mat-sidenav-container>

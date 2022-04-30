@@ -1,0 +1,26 @@
+.page-add-product {
+  padding: 24px;
+  .chip-select-form-mobile-color {
+    background-color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  .table-input-product {
+    .line-right {
+      border-right: 2px solid #dfdfdf
+    }
+    .line-button {
+      border-bottom: 2px solid #dfdfdf
+    }
+    .h-40-px {
+      height: 40px
+    }
+    .input-color {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+    }
+  }
+  .padding-lr-12-px {
+    padding: 0px 12px;
+  }
+}
